@@ -1,14 +1,18 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Login } from "./components";
+import { Login, Home } from "./components";
+
+import { DataProvider } from "./context/Context";
 
 const App = () => {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        {/* <Route path="/chat" element={Chats} /> */}
-      </Routes>
+      <DataProvider>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </DataProvider>
     </div>
   );
 };
