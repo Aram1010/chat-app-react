@@ -6,7 +6,7 @@ const Home = () => {
   const { user } = DataLayerContext();
 
   return (
-    <div>
+    <div className="h-[100vh]">
       <Navbar user={user} />
       <Chats />
     </div>
