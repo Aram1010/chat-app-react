@@ -1,7 +1,7 @@
-import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import React, { useEffect, useRef, useState } from "react";
+import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { db } from "../firebase";
-import {SendMessage , Message} from "./"
+import { SendMessage, Message } from "./";
 
 const Chats = () => {
   const [messages, setMessages] = useState([]);
@@ -21,13 +21,13 @@ const Chats = () => {
 
   return (
     <div className="">
-      <div className="flex flex-col relative">  
+      <div className="flex flex-col">
         {messages &&
           messages.map((message) => (
             <Message key={message.id} message={message} />
           ))}
       </div>
-      <SendMessage />
+      <SendMessage scroll={scroll} />
       <span ref={scroll}></span>
     </div>
   );

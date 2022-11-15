@@ -45,7 +45,7 @@ const Navbar = ({ user }) => {
         </div>
       </div>
       <button onClick={() => signOut()}>
-        <FontAwesomeIcon icon={faSignOutAlt} className="mr-[7px]" /> Sign out
+        <FontAwesomeIcon icon={faSignOutAlt} className="mr-[7px]" /> <span className="max-sm:hidden">Sign out</span>
       </button>
     </div>
   );
